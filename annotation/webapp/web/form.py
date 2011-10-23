@@ -41,7 +41,9 @@ class Form(object):
             if i.is_hidden():
                 out += '    <tr style="display: none;"><th></th><td>%s</td></tr>\n' % (html)
             else:
-                out += '    <tr><th><label for="%s">%s</label></th><td>%s</td></tr>\n' % (i.id, net.websafe(i.description), html)
+                # sanitation removed by KBP because I'm lazy and this isn't a real webapp anyways
+                #out += '    <tr><th><label for="%s">%s</label></th><td>%s</td></tr>\n' % (i.id, net.websafe(i.description), html)
+                out += '    <tr><th><label for="%s">%s</label></th><td>%s</td></tr>\n' % (i.id, i.description, html)
         out += "</table>"
         return out
         

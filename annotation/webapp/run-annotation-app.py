@@ -1,33 +1,89 @@
+import json
+import shutil
 import web
 from web import form
 
-urls = (
-  '/', 'hello')
+DEFAULT_CLASSTYPE = '(select type)'
+DATA_FILENAME = 'data/urls.dat'
+BAK_FILENAME = 'data/urls.dat.bak'
+class_names = [DEFAULT_CLASSTYPE,
+               'development',
+               'graphics',
+               'databases',
+               'networking',
+               'mobile',
+               'webapps',
+               'loggers',
+               'editors/IDE',
+               'other']
 
+def get_classval(val):
+    if val == None: return DEFAULT_CLASSTYPE
+    return val
+
+def get_forms():
+    return [form.Dropdown(name='classlabel%d' % i,
+                          args=class_names,
+                          value = get_classval(pair[1]),
+                          description = '<a href="%s">%s</a>' % (pair[0], pair[0]))
+            for i,pair in enumerate(url_labels)]
+
+def read_url_labels():
+    f = open(DATA_FILENAME, 'r')
+    li = []
+    for line in f:
+        toks = line.split()
+        if len(toks) == 2:
+            li.append((toks[0], toks[1]))
+        else:
+            li.append((toks[0], None))
+    f.close()
+    return li
+
+def get_indiv_label_from_form(index):
+    if class_form['classlabel%d' % index].value == DEFAULT_CLASSTYPE:
+        return None
+    return class_form['classlabel%d' % index].value
+
+def get_url_labels_from_form():
+    li = []
+    for i in range(len(url_labels)):
+        li.append((url_labels[i][0], get_indiv_label_from_form(i)))
+    return li
+
+def write_url_labels_to_file():
+    global url_labels
+    shutil.copy(DATA_FILENAME, BAK_FILENAME)
+    url_labels = get_url_labels_from_form()
+    f = open(DATA_FILENAME, 'w')
+    for pair in url_labels:
+        if pair[1] is None:
+            f.write('%s\n' % pair[0])
+        else:
+            f.write('%s\t%s\n' % pair)
+    f.close()
+
+urls = (
+  '/', 'annotator')
 app = web.application(urls, globals(), autoreload=True)
 render = web.template.render('templates/')
+url_labels = read_url_labels()
+class_form = form.Form(*get_forms())
 
-
-DEFAULT_CLASSTYPE = '(select type)'
-class_names = [DEFAULT_CLASSTYPE, 'type1', 'type2', 'type3']
-
-dropdown_form = form.Form( 
-    form.Dropdown(name='class',
-                  args=class_names,
-                  value = DEFAULT_CLASSTYPE
-                 ))
-
-class hello:
+class annotator:
     def GET(self):
-        my_form = dropdown_form()
-        return render.hello(my_form)
+        return render.mainmenu(class_form)
 
     def POST(self): 
-        my_form = dropdown_form() 
-        if not my_form.validates(): 
-            return render.hello(my_form)
+        # whoa, validates has side effects! we need this call :c
+        if not class_form.validates():
+            return render.mainmenu(class_form)
         else:
-            return 'you selected %s' % my_form['class'].value
+            write_url_labels_to_file()
+            return render.mainmenu(class_form)
+        #return ' '.join([class_form['classlabel%d' % i].value for i in range(len(url_labels))])
+        #return 'you selected %s' % my_form['class'].value
+
 
 if __name__ == "__main__":
     app.run()
