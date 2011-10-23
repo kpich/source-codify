@@ -81,9 +81,6 @@ class annotator:
         else:
             write_url_labels_to_file()
             return render.mainmenu(class_form)
-        #return ' '.join([class_form['classlabel%d' % i].value for i in range(len(url_labels))])
-        #return 'you selected %s' % my_form['class'].value
-
 
 if __name__ == "__main__":
     app.run()
