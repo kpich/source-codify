@@ -15,6 +15,7 @@ class_names = [DEFAULT_CLASSTYPE,
                'webapps',
                'loggers',
                'editors/IDE',
+               'games',
                'other']
 
 def get_classval(val):
