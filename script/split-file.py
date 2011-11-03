@@ -1,6 +1,6 @@
 import sys
 
-NUM_LINES_IN_NEW_FILES = 20
+NUM_LINES_IN_NEW_FILES = 500
 
 def main(filename):
     lines = open(filename, 'r').readlines()

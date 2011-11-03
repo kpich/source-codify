@@ -8,7 +8,7 @@ def main(jsonfilename):
 #        print n.encode('utf-8')
     for repo in li:
         if 'name' in repo:
-            print repr(repo["url"])
+            print repr(repo["name"])
 
 if __name__ == '__main__':
     main(sys.argv[1])
