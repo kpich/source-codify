@@ -8,7 +8,7 @@
 % must be a comma-delimited matrix (so if the matrix is m x n, the file will have
 % m lines, each of which has n comma-delimited values).
 %
-% the pagerank matrix gets printed to pagerank-{adj_matrix_filename}
+% the pagerank matrix gets printed to {adj_matrix_filename}.pagerank.txt
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -20,9 +20,12 @@ alpha = 0.9;
 
 A = dlmread(adj_matrix_filename);
 
-outdegrees = sum(A')
+outdegrees = sum(A');
+% if a node has no outgoing edges, set its outdegree to 1 so we don't
+% divide by 0 below (this doesn't mess up the calculations):
+outdegrees = max(outdegrees, 1);
 
-%P is the row-stochastic matrix ultimately giving our pagerank graph:
+% P is the row-stochastic matrix ultimately giving our pagerank graph:
 M = diag(outdegrees) \ A;
 R = ones(size(A)) / size(A,2);
 P = alpha * M + (1 - alpha) * R
@@ -34,6 +37,6 @@ v = W(:, 1);
 %scale v to sum to 1
 v = v / sum(v)
 
-dlmwrite(strcat('pagerank-', adj_matrix_filename), v);
+dlmwrite(strcat(adj_matrix_filename, '.pagerank.txt'), v);
 
 exit
