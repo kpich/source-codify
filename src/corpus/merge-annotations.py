@@ -46,8 +46,9 @@ def construct_final_anns(anns1, anns2, anns3, resolutions23, resolutions13, reso
             res[bad_key] = resolutions12[bad_key]
         else:
             sys.stderr.write('disagreement between 1 and 2: %s\n' % bad_key)
-            sys.stderr.write('\t1: %s\n' % anns1[bad_key])
-            sys.stderr.write('\t2: %s\n' % anns2[bad_key])
+            sys.stderr.write('\t1:   %s\n' % anns1[bad_key])
+            sys.stderr.write('\t2:   %s\n' % anns2[bad_key])
+            sys.stderr.write('\t[3]: %s\n' % resolutions12[bad_key])
             res[bad_key] = 'other'
     for bad_key in d13:
         if resolutions13[bad_key] == anns1[bad_key] or \
@@ -55,8 +56,9 @@ def construct_final_anns(anns1, anns2, anns3, resolutions23, resolutions13, reso
             res[bad_key] = resolutions13[bad_key]
         else:
             sys.stderr.write('disagreement between 1 and 3: %s\n' % bad_key)
-            sys.stderr.write('\t1: %s\n' % anns1[bad_key])
-            sys.stderr.write('\t3: %s\n' % anns3[bad_key])
+            sys.stderr.write('\t1:   %s\n' % anns1[bad_key])
+            sys.stderr.write('\t[2]: %s\n' % resolutions13[bad_key])
+            sys.stderr.write('\t3:   %s\n' % anns3[bad_key])
             res[bad_key] = 'other'
     for bad_key in d23:
         if resolutions23[bad_key] == anns2[bad_key] or \
@@ -64,8 +66,9 @@ def construct_final_anns(anns1, anns2, anns3, resolutions23, resolutions13, reso
             res[bad_key] = resolutions23[bad_key]
         else:
             sys.stderr.write('disagreement between 2 and 3: %s\n' % bad_key)
-            sys.stderr.write('\t2: %s\n' % anns2[bad_key])
-            sys.stderr.write('\t3: %s\n' % anns3[bad_key])
+            sys.stderr.write('\t[1]: %s\n' % resolutions23[bad_key])
+            sys.stderr.write('\t2:   %s\n' % anns2[bad_key])
+            sys.stderr.write('\t3:   %s\n' % anns3[bad_key])
             res[bad_key] = 'other'
     return res
 
