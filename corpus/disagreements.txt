@@ -1,0 +1,432 @@
+disagreement between 1 and 2: https://github.com/mrdon/maven-yamlpom-plugin
+	1: development
+	2: editors/IDE
+disagreement between 1 and 2: https://github.com/grails/grails-maven
+	1: development
+	2: editors/IDE
+disagreement between 1 and 2: https://github.com/okjsp/okjsp-site
+	1: webapps
+	2: other
+disagreement between 1 and 2: https://github.com/FasterXML/jackson-module-hibernate
+	1: other
+	2: development
+disagreement between 1 and 2: https://github.com/ralfebert/jgravatar
+	1: other
+	2: graphics
+disagreement between 1 and 2: https://github.com/SpringSource/spring-data-graph-examples
+	1: other
+	2: development
+disagreement between 1 and 2: https://github.com/cwensel/riffle
+	1: other
+	2: development
+disagreement between 1 and 2: https://github.com/lmcalpin/Play--Scaffold
+	1: development
+	2: webapps
+disagreement between 1 and 2: https://github.com/iandees/xapi-servlet
+	1: databases
+	2: webapps
+disagreement between 1 and 2: https://github.com/onesocialweb/osw-lib-java
+	1: other
+	2: networking
+disagreement between 1 and 2: https://github.com/alkacon/opencms-core
+	1: other
+	2: development
+disagreement between 1 and 2: https://github.com/dscho/fiji
+	1: other
+	2: graphics
+disagreement between 1 and 2: https://github.com/harikrishnan83/rapa
+	1: other
+	2: development
+disagreement between 1 and 2: https://github.com/matthewmccullough/maven-training
+	1: development
+	2: editors/IDE
+disagreement between 1 and 2: https://github.com/seam/servlet
+	1: other
+	2: webapps
+disagreement between 1 and 2: https://github.com/mozilla-metrics/grouperfish
+	1: other
+	2: webapps
+disagreement between 1 and 2: https://github.com/guardianproject/OtRChat
+	1: other
+	2: mobile
+disagreement between 1 and 2: https://github.com/emiliolg/apb
+	1: development
+	2: editors/IDE
+disagreement between 1 and 2: https://github.com/mrdon/maven-trap
+	1: development
+	2: editors/IDE
+disagreement between 1 and 2: https://github.com/ikeike443/HudsonPluginForPlay
+	1: development
+	2: editors/IDE
+disagreement between 1 and 2: https://github.com/markscott/git4idea
+	1: editors/IDE
+	2: development
+disagreement between 1 and 2: https://github.com/jbossas/jboss-as-maven-plugin
+	1: development
+	2: editors/IDE
+disagreement between 1 and 2: https://github.com/droolsjbpm/droolsjbpm-tools
+	1: development
+	2: editors/IDE
+disagreement between 1 and 2: https://github.com/gitblit/gitblit
+	1: development
+	2: webapps
+disagreement between 1 and 2: https://github.com/ning/atlas
+	1: other
+	2: networking
+disagreement between 1 and 2: https://github.com/prb/bigbird
+	1: other
+	2: webapps
+disagreement between 1 and 2: https://github.com/brycecurtis/phonegap-simjs
+	1: development
+	2: mobile
+disagreement between 1 and 2: https://github.com/leaflabs/maple-ide
+	1: other
+	2: editors/IDE
+disagreement between 1 and 2: https://github.com/arquillian/arquillian-examples
+	1: other
+	2: webapps
+disagreement between 1 and 2: https://github.com/TheDgtl/iChat
+	1: games
+	2: networking
+disagreement between 1 and 2: https://github.com/caelum/rest-client
+	1: development
+	2: webapps
+disagreement between 1 and 2: https://github.com/rdelbru/SIREn
+	1: other
+	2: webapps
+disagreement between 1 and 2: https://github.com/dtrott/maven-thrift-plugin
+	1: development
+	2: editors/IDE
+disagreement between 1 and 2: https://github.com/jenkinsci/subversion-plugin
+	1: development
+	2: editors/IDE
+disagreement between 1 and 2: https://github.com/nicoulaj/idea-markdown
+	1: editors/IDE
+	2: development
+disagreement between 1 and 2: https://github.com/9apps/programming-amazon-ec2
+	1: other
+	2: webapps
+disagreement between 1 and 2: https://github.com/esheri3/OWASP-CSRFGuard
+	1: other
+	2: networking
+disagreement between 1 and 2: https://github.com/hlship/tapx
+	1: webapps
+	2: development
+disagreement between 1 and 2: https://github.com/jboulon/Honu
+	1: loggers
+	2: development
+disagreement between 1 and 2: https://github.com/sitemesh/sitemesh2
+	1: development
+	2: graphics
+disagreement between 1 and 2: https://github.com/flaptor/hist4j
+	1: other
+	2: development
+disagreement between 1 and 2: https://github.com/apache/struts2
+	1: webapps
+	2: development
+disagreement between 1 and 3: https://github.com/raymyers/JHaml
+	1: development
+	3: webapps
+disagreement between 1 and 3: https://github.com/jline/jline
+	1: other
+	3: development
+disagreement between 1 and 3: https://github.com/mandubian/siena
+	1: databases
+	3: webapps
+disagreement between 1 and 3: https://github.com/krka/kahlua2
+	1: development
+	3: databases
+disagreement between 1 and 3: https://github.com/factorylabs/ruby-mine-settings
+	1: editors/IDE
+	3: other
+disagreement between 1 and 3: https://github.com/apache/tapestry5
+	1: development
+	3: other
+disagreement between 1 and 3: https://github.com/Netflix/curator
+	1: development
+	3: webapps
+disagreement between 1 and 3: https://github.com/andresteingress/gcontracts
+	1: development
+	3: other
+disagreement between 1 and 3: https://github.com/spreadthesource/wooki
+	1: webapps
+	3: other
+disagreement between 1 and 3: https://github.com/IVPR/Weave
+	1: graphics
+	3: webapps
+disagreement between 1 and 3: https://github.com/markfguerra/GLWallpaperService
+	1: graphics
+	3: mobile
+disagreement between 1 and 3: https://github.com/infochimps/wonderdog
+	1: other
+	3: databases
+disagreement between 1 and 3: https://github.com/simplegeo/java-simplegeo
+	1: other
+	3: webapps
+disagreement between 1 and 3: https://github.com/arquillian/arquillian-core
+	1: development
+	3: other
+disagreement between 1 and 3: https://github.com/mbien/jocl
+	1: other
+	3: development
+disagreement between 1 and 3: https://github.com/torquebox/jruby-maven-plugins
+	1: development
+	3: webapps
+disagreement between 1 and 3: https://github.com/digg/awacs
+	1: graphics
+	3: games
+disagreement between 1 and 3: https://github.com/cretz/gwt-node
+	1: networking
+	3: webapps
+disagreement between 1 and 3: https://github.com/bixolabs/cascading.avro
+	1: databases
+	3: development
+disagreement between 1 and 3: https://github.com/commonsguy/cwac-merge
+	1: development
+	3: webapps
+disagreement between 1 and 3: https://github.com/seam/security
+	1: other
+	3: networking
+disagreement between 1 and 3: https://github.com/magro/memcached-session-manager
+	1: other
+	3: development
+disagreement between 1 and 3: https://github.com/rackspace/java-cloudfiles
+	1: networking
+	3: databases
+disagreement between 1 and 3: https://github.com/Aconex/elasticflume
+	1: other
+	3: development
+disagreement between 1 and 3: https://github.com/rayh/xcode-hudson-plugin
+	1: editors/IDE
+	3: mobile
+disagreement between 1 and 3: https://github.com/skyred/DrupalCloud
+	1: mobile
+	3: webapps
+disagreement between 1 and 3: https://github.com/onesocialweb/osw-openfire-plugin
+	1: other
+	3: webapps
+disagreement between 1 and 3: https://github.com/linkedin/datafu
+	1: other
+	3: databases
+disagreement between 1 and 3: https://github.com/duns/maven-nar-plugin
+	1: development
+	3: other
+disagreement between 1 and 3: https://github.com/alandipert/clj-swingrepl
+	1: editors/IDE
+	3: development
+disagreement between 1 and 3: https://github.com/sonatype/JGit
+	1: development
+	3: editors/IDE
+disagreement between 1 and 3: https://github.com/killme2008/xmemcached
+	1: other
+	3: databases
+disagreement between 1 and 3: https://github.com/titanpad/titanpad
+	1: editors/IDE
+	3: networking
+disagreement between 1 and 3: https://github.com/colder/phantm
+	1: development
+	3: webapps
+disagreement between 1 and 3: https://github.com/apache/tomcat70
+	1: other
+	3: webapps
+disagreement between 1 and 3: https://github.com/uDig/udig-platform
+	1: other
+	3: development
+disagreement between 1 and 3: https://github.com/sikuli/sikuli
+	1: development
+	3: graphics
+disagreement between 1 and 3: https://github.com/SpringSource/spring-security-oauth
+	1: other
+	3: networking
+disagreement between 1 and 3: https://github.com/Ronnie76er/jmeter-maven-plugin
+	1: development
+	3: other
+disagreement between 1 and 3: https://github.com/taylorkelly/BigBrother
+	1: games
+	3: webapps
+disagreement between 1 and 3: https://github.com/github/maven-plugins
+	1: development
+	3: other
+disagreement between 1 and 3: https://github.com/vexsoftware/minequery
+	1: games
+	3: databases
+disagreement between 1 and 3: https://github.com/subgraph/Vega
+	1: development
+	3: graphics
+disagreement between 1 and 3: https://github.com/apache/felix
+	1: development
+	3: other
+disagreement between 1 and 3: https://github.com/SpaceManiac/PermissionsBukkit
+	1: games
+	3: development
+disagreement between 1 and 3: https://github.com/jenkinsci/sbt-plugin
+	1: development
+	3: editors/IDE
+disagreement between 1 and 3: https://github.com/gridgain/gridgain
+	1: other
+	3: databases
+disagreement between 1 and 3: https://github.com/seam/faces
+	1: development
+	3: other
+disagreement between 2 and 3: https://github.com/arduino/Arduino
+	2: editors/IDE
+	3: development
+disagreement between 2 and 3: https://github.com/Greplin/greplin-lucene-utils
+	2: development
+	3: databases
+disagreement between 2 and 3: https://github.com/nathanmarz/storm
+	2: networking
+	3: databases
+disagreement between 2 and 3: https://github.com/fabrantes/rockonnggl
+	2: graphics
+	3: development
+disagreement between 2 and 3: https://github.com/fernandezpablo85/scribe-java
+	2: networking
+	3: webapps
+disagreement between 2 and 3: https://github.com/apache/lucene-solr
+	2: webapps
+	3: development
+disagreement between 2 and 3: https://github.com/kaeppler/signpost
+	2: mobile
+	3: webapps
+disagreement between 2 and 3: https://github.com/essentials/Essentials
+	2: development
+	3: editors/IDE
+disagreement between 2 and 3: https://github.com/yahoo/howl
+	2: development
+	3: other
+disagreement between 2 and 3: https://github.com/sirthias/pegdown
+	2: editors/IDE
+	3: development
+disagreement between 2 and 3: https://github.com/notnoop/java-apns
+	2: networking
+	3: webapps
+disagreement between 2 and 3: https://github.com/flyingsaucerproject/flyingsaucer
+	2: development
+	3: graphics
+disagreement between 2 and 3: https://github.com/aching/Giraph
+	2: development
+	3: graphics
+disagreement between 2 and 3: https://github.com/beders/Resty
+	2: development
+	3: webapps
+disagreement between 2 and 3: https://github.com/aptana/studio3
+	2: development
+	3: other
+disagreement between 2 and 3: https://github.com/jbellis/jamm
+	2: development
+	3: databases
+disagreement between 2 and 3: https://github.com/neo4j/spatial
+	2: other
+	3: development
+disagreement between 2 and 3: https://github.com/bigbluebutton/bigbluebutton
+	2: networking
+	3: webapps
+disagreement between 2 and 3: https://github.com/javasoze/bobo
+	2: webapps
+	3: development
+disagreement between 2 and 3: https://github.com/alphazero/jredis
+	2: other
+	3: development
+disagreement between 2 and 3: https://github.com/cloudera/crunch
+	2: development
+	3: databases
+disagreement between 2 and 3: https://github.com/fernandezpablo85/scribe
+	2: webapps
+	3: development
+disagreement between 2 and 3: https://github.com/bnd/bnd
+	2: editors/IDE
+	3: development
+disagreement between 2 and 3: https://github.com/ModeShape/modeshape
+	2: other
+	3: development
+disagreement between 2 and 3: https://github.com/mixare/mixare
+	2: webapps
+	3: other
+disagreement between 2 and 3: https://github.com/bengarney/PBLabsProfiler
+	2: graphics
+	3: development
+disagreement between 2 and 3: https://github.com/cloudfoundry/vcap-java
+	2: networking
+	3: webapps
+disagreement between 2 and 3: https://github.com/msgpack/msgpack-rpc
+	2: networking
+	3: development
+disagreement between 2 and 3: https://github.com/jayway/robotium
+	2: webapps
+	3: mobile
+disagreement between 2 and 3: https://github.com/badlogic/libgdx
+	2: games
+	3: graphics
+disagreement between 2 and 3: https://github.com/jamesladd/old-redline-smalltalk
+	2: development
+	3: mobile
+disagreement between 2 and 3: https://github.com/dtolabs/rundeck
+	2: development
+	3: webapps
+disagreement between 2 and 3: https://github.com/jclouds/jclouds
+	2: networking
+	3: databases
+disagreement between 2 and 3: https://github.com/verekia/initializr
+	2: development
+	3: webapps
+disagreement between 2 and 3: https://github.com/RJ/irccat
+	2: loggers
+	3: networking
+disagreement between 2 and 3: https://github.com/cucumber/cucumber-jvm
+	2: editors/IDE
+	3: development
+disagreement between 2 and 3: https://github.com/tinkerpop/blueprints
+	2: graphics
+	3: development
+disagreement between 2 and 3: https://github.com/grails/grails-core
+	2: editors/IDE
+	3: development
+disagreement between 2 and 3: https://github.com/lintool/Cloud9
+	2: development
+	3: databases
+disagreement between 2 and 3: https://github.com/sonatype/mvnsh
+	2: other
+	3: networking
+disagreement between 2 and 3: https://github.com/SpringSource/spring-social-samples
+	2: development
+	3: graphics
+disagreement between 2 and 3: https://github.com/myabc/nbgit
+	2: development
+	3: databases
+disagreement between 2 and 3: https://github.com/amazonwebservices/aws-sdk-for-java
+	2: development
+	3: webapps
+disagreement between 2 and 3: https://github.com/SpringSource/spring-social
+	2: mobile
+	3: webapps
+disagreement between 2 and 3: https://github.com/anthonyu/KeptCollections
+	2: development
+	3: databases
+disagreement between 2 and 3: https://github.com/orfjackal/idea-sbt-plugin
+	2: other
+	3: databases
+disagreement between 2 and 3: https://github.com/SpringSource/spring-hadoop
+	2: development
+	3: databases
+disagreement between 2 and 3: https://github.com/hudson/hudson
+	2: editors/IDE
+	3: other
+disagreement between 2 and 3: https://github.com/slagyr/limelight
+	2: editors/IDE
+	3: development
+disagreement between 2 and 3: https://github.com/facebook/hadoop-20
+	2: development
+	3: databases
+disagreement between 2 and 3: https://github.com/sitemesh/sitemesh3
+	2: editors/IDE
+	3: other
+disagreement between 2 and 3: https://github.com/koraktor/steam-condenser
+	2: webapps
+	3: networking
+disagreement between 2 and 3: https://github.com/asakusafw/asakusafw
+	2: development
+	3: databases
+disagreement between 2 and 3: https://github.com/nimbusproject/nimbus
+	2: networking
+	3: development
