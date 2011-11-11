@@ -33,7 +33,7 @@ do
             echo $parseOp
             echo $line
             echo $out_filename
-            python $DIR/tokenizer.py $line $out_filename $parseOp
+            python $DIR/tokenizer.py "$line" "$out_filename" $parseOp
         fi
         done < ${arg}
     fi

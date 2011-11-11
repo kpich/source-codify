@@ -27,7 +27,7 @@ import os
 import sys
 
 # if a word appears in too few files, we don't consider it for featurehood:
-MIN_NUM_FILE_APPEARANCES = 2
+MIN_NUM_FILE_APPEARANCES = 4
 
 # the number of features to extract per class
 NUM_FEATS_PER_CLASS = 100
