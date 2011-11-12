@@ -20,7 +20,6 @@ def main(file1, file2, file3,
     resolutions12 = read_annotation_map(resolve12)
     final_labels = construct_final_anns(anns1, anns2, anns3,
                                         resolutions23, resolutions13, resolutions12)
-    labs = set(anns1.values() + anns2.values() + anns3.values())
     for url,lab in final_labels.items():
         print '%s\t%s' % (url, lab)
 
