@@ -25,6 +25,7 @@ import math
 import operator
 import os
 import sys
+import time
 
 # if a word appears in too few files, we don't consider it for featurehood:
 MIN_NUM_FILE_APPEARANCES = 4
@@ -35,25 +36,66 @@ NUM_FEATS_PER_CLASS = 100
 EPS = 0.001
 
 def main(repo_tokfilelist_dir, labels_fname, repo_basedir):
+    sys.stderr.write('getting repo_lab_map...\n')
+    t = time.time()
     repo_lab_map = get_repo_to_lab_map(labels_fname)
+    sys.stderr.write('took %f seconds.\n' % (time.time() - t))
+    t = time.time()
+
+    sys.stderr.write('getting repo_fname_map...\n')
     repo_fname_map = get_repo_to_filenames_map(repo_tokfilelist_dir)
+    sys.stderr.write('took %f seconds.\n' % (time.time() - t))
+    t = time.time()
+
+    sys.stderr.write('getting class_to_repos_map...\n')
     class_to_repos_map = get_class_to_repos_map(repo_lab_map)
+    sys.stderr.write('took %f seconds.\n' % (time.time() - t))
+    t = time.time()
+
+    sys.stderr.write('getting per_class_feat_counts...\n')
     per_class_feat_counts = get_per_class_feat_counts(repo_fname_map, repo_basedir, repo_lab_map, class_to_repos_map)
+    sys.stderr.write('took %f seconds.\n' % (time.time() - t))
+    t = time.time()
+
+    sys.stderr.write('getting all_feat_counts...\n')
     all_feat_counts = get_all_candidate_feat_counts(per_class_feat_counts)
     num_files = get_num_files(repo_fname_map)
+    sys.stderr.write('took %f seconds.\n' % (time.time() - t))
+    t = time.time()
+
+    sys.stderr.write('getting class_prior_map...\n')
     class_prior_map = get_class_priors(repo_lab_map)
+    sys.stderr.write('took %f seconds.\n' % (time.time() - t))
+    t = time.time()
+
+    sys.stderr.write('getting feat_prior_map...\n')
     feat_prior_map = get_feat_priors(all_feat_counts, num_files)
+    sys.stderr.write('took %f seconds.\n' % (time.time() - t))
+    t = time.time()
+
+    sys.stderr.write('getting c_given_f_map...\n')
     c_given_f_map = get_c_given_f_map(per_class_feat_counts,
                                       all_feat_counts)
+    sys.stderr.write('took %f seconds.\n' % (time.time() - t))
+    t = time.time()
+
+    sys.stderr.write('getting c_given_f_bar_map...\n')
     c_given_f_bar_map = get_c_given_f_bar_map(per_class_feat_counts,
                                               all_feat_counts,
                                               get_class_to_fnames_map(class_to_repos_map, repo_fname_map),
                                               num_files)
+    sys.stderr.write('took %f seconds.\n' % (time.time() - t))
+    t = time.time()
+
+    sys.stderr.write('getting class_exent_loss_map...\n')
     class_exent_loss_map = calc_class_exent_loss_map(class_prior_map,
                                                      feat_prior_map,
                                                      c_given_f_map,
                                                      c_given_f_bar_map)
     print_top_features(class_exent_loss_map)
+
+    sys.stderr.write('took %f seconds.\n' % (time.time() - t))
+    sys.stderr.write('DONE!\n')
 #    print 'numfiles: %d' % num_files
 #    print class_prior_map
 #    print feat_prior_map
@@ -168,15 +210,24 @@ def get_per_class_feat_counts(repo_fname_map, repo_basedir, repo_lab_map, class_
     '''
     counts = dict()
     for lab,repos in class_to_repos_map.items():
+        sys.stderr.write('CLASS: %s\n' % lab)
         class_counts = dict()
         for repo in repos:
-            for fname in repo_fname_map[repo]:
+            sys.stderr.write('\tREPO: %s\n' % repo)
+            t = time.time()
+            try:
+                fnames = repo_fname_map[repo]
+            except KeyError:
+                sys.stderr.write('\tDirectory not found! Moving on...\n')
+                continue
+            for fname in fnames:
                 already_added = set()
                 for tok in get_tokens_from_file(os.path.join(repo_basedir, fname)):
                     if tok not in already_added:
                         c = class_counts.setdefault(tok, 0)
                         class_counts[tok] = c+1
                         already_added.add(tok)
+            sys.stderr.write('Repo took %f seconds.\n' % (time.time() - t))
         counts[lab] = class_counts
     trim_insufficiently_common_words(counts)
     return counts
