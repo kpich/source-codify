@@ -1,0 +1,3 @@
+the vectors/ dir contains the actual pagerank vectors, and 
+index-filename-correspondences/ contains the links between the (0-indexed)
+vector dimensions and the actual filenames in the repos.

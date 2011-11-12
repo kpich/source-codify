@@ -1,0 +1,11 @@
+InstrumentationHook	16
+EMMAAnalyzer	15
+PropertyUtils	18
+SimpleUITestCase	11
+InstrumentationHookConfigurator	17
+ICoverageAnalyzer	14
+SampleView	13
+SimpleTest	9
+Activator	12
+Model	8
+AllTests	10

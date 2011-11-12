@@ -1,0 +1,17 @@
+PersistentStructMapTC	8
+SymbolTC	13
+AtomTC	1
+PersistentArrayMapTC	6
+ProxyHandlerTC	11
+VarTC	15
+PersistentHashMapTC	7
+IfExprTC	3
+PersistentVectorTC	10
+PersistentTreeMapTC	9
+ClojureTerracottaConfigurator	16
+RTTC	12
+DynamicClassLoaderTC	2
+LazilyPersistentVectorTC	4
+NamespaceTC	5
+AgentTC	0
+UtilTC	14

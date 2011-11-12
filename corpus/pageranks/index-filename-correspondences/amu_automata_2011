@@ -1,0 +1,9 @@
+TestNaiveAutomatonSpecification	8
+AutomatonSpecification	1
+DeterministicAutomatonSpecification	2
+OutgoingTransition	5
+TransitionLabel	7
+EmptyTransitionLabel	3
+State	6
+Acceptor	0
+NaiveAutomatonSpecification	4

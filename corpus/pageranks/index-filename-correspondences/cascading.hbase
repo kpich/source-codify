@@ -1,0 +1,6 @@
+MultiFamilyCascadeHBaseTest	3
+MultiFamilyFullyQualifiedTest	4
+HBaseScheme	0
+MultiFamilyHBaseTest	5
+HBaseTap	1
+HBaseTestCase	2

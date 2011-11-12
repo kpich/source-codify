@@ -1,0 +1,13 @@
+ReportingActivityGroup	4
+ReportingListActivity	9
+ReportingTabActivity	12
+ReportingPreferenceActivity	10
+ReportingIntentService	7
+ExceptionReportActivity	0
+ExceptionReportService	1
+ReportingAliasActivity	5
+ReportingLauncherActivity	8
+ReportingActivity	3
+ReportingExpandableListActivity	6
+ExceptionReporter	2
+ReportingService	11

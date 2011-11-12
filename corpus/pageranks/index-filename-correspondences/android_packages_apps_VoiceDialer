@@ -1,0 +1,11 @@
+CommandRecognizerEngine	1
+VoiceDialerActivity	7
+VoiceDialerLaunchPerformance	10
+VoiceDialerReceiver	8
+PhoneTypeChoiceRecognizerEngine	2
+BluetoothVoiceDialerActivity	0
+VoiceDialerTester	9
+RecognizerLogger	5
+RecognizerClient	3
+RecognizerEngine	4
+VoiceContact	6

@@ -1,0 +1,17 @@
+DevNullOutputStream	15
+LzoJavaDriver	9
+LzfDriver	6
+QuickLZ	10
+DriverBase	0
+LzmaDriver	7
+JCraftGzipDriver	3
+LzmaJavaDriver	8
+SnappyDriver	14
+JDKGzipDriver	4
+QuickLZDriver3	12
+ManualPerfComparison	16
+BZip2Driver	2
+QuickLZDriver1	11
+Operation	1
+QuickLZDriverBase	13
+Iq80SnappyDriver	5

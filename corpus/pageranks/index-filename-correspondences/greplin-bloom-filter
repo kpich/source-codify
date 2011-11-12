@@ -1,0 +1,10 @@
+BloomBenchmark	7
+SeekSequentialWriteBenchmark	9
+CloseCallback	6
+InvalidBloomFilter	3
+BloomFilterTest	8
+RepeatedMurmurHash	4
+BloomMetadata	1
+BloomFilter	0
+Allocator	5
+BucketSize	2

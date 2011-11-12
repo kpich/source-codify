@@ -1,0 +1,9 @@
+InsertSuperColumn	3
+TombstonedGetRangeSlices	8
+MultigetSliceRetrieval	4
+ResultDetailsDemo	6
+InsertSingleColumn	2
+GetIndexedSlices	0
+PaginateGetRangeSlices	5
+SchemaManipulation	7
+GetRangeSlicesKeysOnly	1

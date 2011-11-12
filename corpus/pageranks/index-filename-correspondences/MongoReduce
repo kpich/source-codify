@@ -1,0 +1,11 @@
+MongoStreamInputFormat	6
+MongoOutputFormat	3
+MongoOutputCommitter	2
+WordCount	10
+MongoRecordReader	4
+MongoStreamRecordReader	8
+MongoStreamRecordWriter	9
+MongoStreamOutputFormat	7
+MongoInputSplit	1
+MongoInputFormat	0
+MongoRecordWriter	5

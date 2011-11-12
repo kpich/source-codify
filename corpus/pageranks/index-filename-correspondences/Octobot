@@ -1,0 +1,12 @@
+QueueConsumer	6
+Queue	5
+MailQueue	2
+SampleNonRunnableTask	10
+Settings	8
+RabbitMQ	7
+SampleTask	11
+Metrics	3
+Beanstalk	0
+TaskExecutor	9
+Introspector	1
+Octobot	4

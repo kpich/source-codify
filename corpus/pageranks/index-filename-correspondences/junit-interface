@@ -1,0 +1,15 @@
+EventDispatcher	1
+TestMarker	14
+TestAssumptionFailedEvent	9
+JUnitFilter	3
+AbstractEvent	0
+JUnitRunner	6
+OutputCapture	7
+RichLogger	8
+TestExecutionFailedEvent	10
+JUnitFingerprint	4
+TestFailedEvent	11
+TestIgnoredEvent	13
+JUnit3Fingerprint	2
+TestFinishedEvent	12
+JUnitFramework	5

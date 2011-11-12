@@ -1,0 +1,12 @@
+map	2
+MyCustomStopWords	11
+IndexType	7
+MyCustomSearch	10
+CouchIndexUtils	6
+reduce	3
+SearchView	5
+SingleDocumentIndex	9
+JavaView	4
+SplitText	12
+IndexUtilities	8
+StDateUtils	13

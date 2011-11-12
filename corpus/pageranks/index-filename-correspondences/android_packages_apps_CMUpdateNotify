@@ -1,0 +1,12 @@
+DeviceRegistrar	4
+Preferences	6
+SystemProperties	0
+C2DMBroadcastReceiver	10
+C2DMBaseReceiver	9
+C2DMReceiver	1
+C2DMessaging	11
+MainActivity	3
+NightlyLicense	5
+RegistrationClient	7
+StringUtils	8
+DownloadActivity	2
