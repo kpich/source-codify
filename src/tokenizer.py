@@ -37,15 +37,15 @@ def tokenize_nonComment(line):
         if (m == None):
             subwords = []
             return [ subwords, True]
-        else:            
-            return tokenize_comment(m.group(0)) 
+        else:
+            return tokenize_comment(m.group(0))
     else:
         return [ [], False]
 
 def main():
     in_file = sys.argv[1]
     out_file = sys.argv[2]
-    whole = int(sys.argv[3]) 
+    whole = int(sys.argv[3])
 
     tokens = []
     lines = []
@@ -53,7 +53,7 @@ def main():
     f_in = open(in_file, 'r');
     
     if (whole == 1):
-        subwords = re.findall('[A-Z][A-Z]*[a-z]*|[a-z]+', f_in.read())            
+        subwords = re.findall('[A-Z][A-Z]*[a-z]*|[a-z]+', f_in.read())
         tokens.extend(map(lambda x : x.lower(), subwords))
  
     if (whole == 0):
@@ -61,11 +61,32 @@ def main():
         for line in f_in:
 
             if (inComment == False):
-                retVal = tokenize_nonComment(line)                
+                retVal = tokenize_nonComment(line)
             else:
                 retVal = tokenize_comment(line)
             inComment = retVal[1]
             tokens.extend(map(lambda x : x.lower(), retVal[0]))
+
+
+
+    if (whole == 2):
+
+        lines = []
+        for l in f_in:
+            temp = re.findall('^import\s+.*', l)
+            lines.extend(temp)
+
+        for line in lines:
+            
+            subline = re.split('^import\s', line,1)
+            subbline = re.split('//', subline[1],1)
+
+            subwords = re.findall('[\w\-]+', subbline[0])
+
+            tokens.extend(map(lambda x : x.lower(), subwords))
+                
+    
+
 
     f_in.close()
 
@@ -73,9 +94,8 @@ def main():
     for token in tokens:
         f_out.write(token +'\n')
 
-    f_out.close()            
+    f_out.close()
                 
-
 
         
 
