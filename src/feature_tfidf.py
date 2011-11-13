@@ -1,6 +1,13 @@
+#!/usr/bin/env python
+''' Pass this two params:
+    - The filename of "reponame label" pairs
+    - The path containing the actual files.
+'''
 import tfidf
-import math
 import glob,os
+import sys
+
+NUM_FEATS_PER_LABEL = 100;
 
 my_tfidf = tfidf.TfIdf();
 
@@ -61,17 +68,13 @@ def writeTfIdf(path,label,tfidf_k):
         
 
 
-def main():
-    labelfile = './labeled-corpus-striped.txt'
-    path = '/scratch/cluster/pichotta/dm-corpus-tokenized/'
-    #path = '/Users/vinodh/fall2011/DM/repos/'
-    num_features = 1000;
-
-    readLabels(labelfile)
-    scandirs(path)
-    
+def main(label_fname, path_dirname):
+    readLabels(label_fname)
+    scandirs(path_dirname)
     my_tfidf.save_corpus_to_file("idf_file.txt","stopword.txt")
     my_tfidf = tfidf.TfIdf("idf_file.txt", "stopword.txt"); 
-    getTfIdf(num_features,'features/')
+    getTfIdf(NUM_FEATS_PER_LABEL,'features/')
 
-main()
+if __name__ == '__main__':
+    main(sys.argv[1], sys.argv[2])
+
