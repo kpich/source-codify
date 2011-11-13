@@ -21,12 +21,21 @@ alpha = 0.9;
 A = dlmread(adj_matrix_filename);
 
 outdegrees = sum(A');
+
+% FixedA is A, but any rows with outdegree zero have value 1/size(A,2).
+FixedA = A;
+for i=1:size(A,2)
+    if outdegrees(i) == 0
+        FixedA(i,:) = ones(1, size(A,2)) / size(A,2);
+    end
+end
+
 % if a node has no outgoing edges, set its outdegree to 1 so we don't
 % divide by 0 below (this doesn't mess up the calculations):
 outdegrees = max(outdegrees, 1);
 
 % P is the row-stochastic matrix ultimately giving our pagerank graph:
-M = diag(outdegrees) \ A;
+M = diag(outdegrees) \ FixedA;
 R = ones(size(A)) / size(A,2);
 P = alpha * M + (1 - alpha) * R
 
