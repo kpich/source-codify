@@ -51,7 +51,7 @@ def scandirs(path):
         else:
             label = getLabel(currentFile);
             #print 'Processing file' + currentFile
-            tstr = currentFile.read()
+            tstr = open(currentFile, 'r').read()
             
             updateTokenforLabels(label,tstr)
 
@@ -80,7 +80,7 @@ def main(label_fname, path_dirname):
     scandirs(path_dirname)
     my_tfidf.save_corpus_to_file(IDF_FNAME, STOPWORD_FNAME)
     my_tfidf = tfidf.TfIdf(IDF_FNAME, STOPWORD_FNAME); 
-    ensure_dir(FEATURES_DIR):
+    ensure_dir(FEATURES_DIR)
     getTfIdf(NUM_FEATS_PER_LABEL, FEATURES_DIR)
 
 if __name__ == '__main__':
