@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#first arg is for type of parsing-    0 for comments only        1 for all
+#first arg is for type of parsing-    0 for comments only        1 for all     2 for just tokenizing import statements
 #after first you can have arbitrary number of files listed
 #each file listed as an arg should itself be a list of paths to other files
 #this list of paths should be one per line and newline after each full path name
