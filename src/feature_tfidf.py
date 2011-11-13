@@ -71,7 +71,7 @@ def main():
     scandirs(path)
     
     my_tfidf.save_corpus_to_file("idf_file.txt","stopword.txt")
-    my_tfidf = 
+    my_tfidf = tfidf.TfIdf("idf_file.txt", "stopword.txt"); 
     getTfIdf(num_features,'features/')
 
 main()
