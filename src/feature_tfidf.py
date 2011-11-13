@@ -9,6 +9,10 @@ import sys
 
 NUM_FEATS_PER_LABEL = 100;
 
+FEATURES_DIR = 'features/'
+IDF_FNAME = 'idf_file.txt'
+STOPWORD_FNAME = 'stopwords.txt'
+
 my_tfidf = tfidf.TfIdf();
 
 token_labels = {}
@@ -66,14 +70,18 @@ def writeTfIdf(path,label,tfidf_k):
         fh.write(str(w[0])+' '+str(w[1]) +'\n')
     fh.close()
         
-
+def ensure_dir(filename):
+    d = os.path.dirname(filename)
+    if not os.path.exists(d):
+        os.makedirs(d)
 
 def main(label_fname, path_dirname):
     readLabels(label_fname)
     scandirs(path_dirname)
-    my_tfidf.save_corpus_to_file("idf_file.txt","stopword.txt")
-    my_tfidf = tfidf.TfIdf("idf_file.txt", "stopword.txt"); 
-    getTfIdf(NUM_FEATS_PER_LABEL,'features/')
+    my_tfidf.save_corpus_to_file(IDF_FNAME, STOPWORD_FNAME)
+    my_tfidf = tfidf.TfIdf(IDF_FNAME, STOPWORD_FNAME); 
+    ensure_dir(FEATURES_DIR):
+    getTfIdf(NUM_FEATS_PER_LABEL, FEATURES_DIR)
 
 if __name__ == '__main__':
     main(sys.argv[1], sys.argv[2])
