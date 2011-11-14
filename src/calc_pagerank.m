@@ -19,6 +19,7 @@ function [] = calc_pagerank(adj_matrix_filename)
 alpha = 0.9;
 
 A = dlmread(adj_matrix_filename);
+A = sparse(A);
 
 outdegrees = sum(A');
 
@@ -37,9 +38,9 @@ outdegrees = max(outdegrees, 1);
 % P is the row-stochastic matrix ultimately giving our pagerank graph:
 M = diag(outdegrees) \ FixedA;
 R = ones(size(A)) / size(A,2);
-P = alpha * M + (1 - alpha) * R
+P = alpha * M + (1 - alpha) * R;
 
-[W,D] = eig(P.')
+[W,D] = eig(P.');
 W = conj(W);
 v = W(:, 1);
 
