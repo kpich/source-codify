@@ -25,12 +25,11 @@ def readLabels(file):
         w = line.split('\t')
         if(len(w) <2): continue
         #print line,len(w);
-        labels[str(w[0])] = str(w[1].rstrip('\n'))
+        labels[str(w[0])] = str(w[1].strip().replace('/', '_'))
 
 def getLabel(file):
     n = 5
     w = file.split('/')
-    #print w
     return labels[w[n]]
 
 def updateTokenforLabels(label, str2):
@@ -49,8 +48,8 @@ def scandirs(path):
             #print 'got a directory: ' + currentFile
             scandirs(currentFile)
         else:
-            label = getLabel(currentFile);
             #print 'Processing file' + currentFile
+            label = getLabel(currentFile);
             tstr = open(currentFile, 'r').read()
             
             updateTokenforLabels(label,tstr)
@@ -76,6 +75,7 @@ def ensure_dir(filename):
         os.makedirs(d)
 
 def main(label_fname, path_dirname):
+    global my_tfidf
     readLabels(label_fname)
     scandirs(path_dirname)
     my_tfidf.save_corpus_to_file(IDF_FNAME, STOPWORD_FNAME)
