@@ -66,6 +66,7 @@ def get_feat_vals_from_repo(repo_fnames, features, pageranks, reponame):
                 counts[features.index(word)] += 1
                 prtots[features.index(word)] += get_pagerank(pageranks, fname, reponame, len(repo_fnames))
         numtoks += len(words)
+    if numtoks == 0: numtoks = 1
     return [float(x) / numtoks + prtots[i] for i,x in enumerate(counts)]
 
 def construct_lab_to_num_map(labs):
