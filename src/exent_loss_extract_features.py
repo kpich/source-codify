@@ -28,7 +28,7 @@ import sys
 import time
 
 # if a word appears in too few files, we don't consider it for featurehood:
-MIN_NUM_FILE_APPEARANCES = 4
+MIN_NUM_FILE_APPEARANCES = 3
 
 # the number of features to extract per class
 NUM_FEATS_PER_CLASS = 100
@@ -68,16 +68,25 @@ def main(repo_tokfilelist_dir, labels_fname, repo_basedir):
     sys.stderr.write('took %f seconds.\n' % (time.time() - t))
     t = time.time()
 
+    #print 'class prior'
+    #print class_prior_map
+
     sys.stderr.write('getting feat_prior_map...\n')
     feat_prior_map = get_feat_priors(all_feat_counts, num_files)
     sys.stderr.write('took %f seconds.\n' % (time.time() - t))
     t = time.time()
+
+    #print 'feat prior'
+    #print feat_prior_map
 
     sys.stderr.write('getting c_given_f_map...\n')
     c_given_f_map = get_c_given_f_map(per_class_feat_counts,
                                       all_feat_counts)
     sys.stderr.write('took %f seconds.\n' % (time.time() - t))
     t = time.time()
+
+    #print 'c given f'
+    #print c_given_f_map
 
     sys.stderr.write('getting c_given_f_bar_map...\n')
     c_given_f_bar_map = get_c_given_f_bar_map(per_class_feat_counts,
@@ -87,11 +96,17 @@ def main(repo_tokfilelist_dir, labels_fname, repo_basedir):
     sys.stderr.write('took %f seconds.\n' % (time.time() - t))
     t = time.time()
 
+    #print 'c given f bar'
+    #print c_given_f_bar_map
+
     sys.stderr.write('getting class_exent_loss_map...\n')
     class_exent_loss_map = calc_class_exent_loss_map(class_prior_map,
                                                      feat_prior_map,
                                                      c_given_f_map,
                                                      c_given_f_bar_map)
+    #print 'class exent_loss:'
+    #print class_exent_loss_map 
+
     print_top_features(class_exent_loss_map)
 
     sys.stderr.write('took %f seconds.\n' % (time.time() - t))
@@ -149,7 +164,7 @@ def calc_ent(prob):
 
 def calc_EEL(class_lab, feat_lab, prior_ents, pos_posterior_ents, neg_posterior_ents, feat_priors):
     return (prior_ents[class_lab] -
-           (pos_posterior_ents[class_lab][feat_lab] * feat_priors[feat_lab]) +
+           (pos_posterior_ents[class_lab][feat_lab] * feat_priors[feat_lab]) -
            (neg_posterior_ents[class_lab][feat_lab] * (1.0 - feat_priors[feat_lab])))
 
 def get_c_given_f_map(per_class_feat_counts, all_feat_counts):
@@ -193,8 +208,15 @@ def get_feat_priors(feat_counts, num_files):
     return dict([(k, float(v) / num_files) for k,v in feat_counts.items()])
 
 def get_class_to_fnames_map(class_to_repos_map, repo_fname_map):
-    return dict([(cl, list(itertools.chain(*[repo_fname_map[r] for r in repos])))
-                 for cl,repos in class_to_repos_map.items()])
+    # return dict([(cl, list(itertools.chain(*[repo_fname_map[r] for r in repos])))
+    #              for cl,repos in class_to_repos_map.items()])
+    res = dict()
+    for cl,repos in class_to_repos_map.items():
+        res[cl] = []
+        for r in repos:
+            if r in repo_fname_map:
+                res[cl] += repo_fname_map[r]
+    return res
 
 def get_num_files(repo_fname_map):
     return sum([len(v) for v in repo_fname_map.values()])
@@ -212,13 +234,14 @@ def get_per_class_feat_counts(repo_fname_map, repo_basedir, repo_lab_map, class_
     for lab,repos in class_to_repos_map.items():
         sys.stderr.write('CLASS: %s\n' % lab)
         class_counts = dict()
-        for repo in repos:
+        for i,repo in enumerate(repos):
             sys.stderr.write('\tREPO: %s\n' % repo)
             t = time.time()
             try:
                 fnames = repo_fname_map[repo]
             except KeyError:
-                sys.stderr.write('\tDirectory not found! Moving on...\n')
+                sys.stderr.write('\tDirectory not found! Moving on (and destructively modifying class_to_repos_map and repo_fname_map to no longer have it...\n')
+                del repos[i]
                 continue
             for fname in fnames:
                 already_added = set()
