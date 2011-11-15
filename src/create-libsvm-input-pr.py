@@ -64,10 +64,22 @@ def get_feat_vals_from_repo(repo_fnames, features, pageranks, reponame):
             if word in feature_set and word not in used:
                 used.add(word)
                 counts[features.index(word)] += 1
+                #conditional needed for inverse rank
+                #if len(repo_fnames) == 1:
+                #    prtots[features.index(word)] += 1.0
+                #else:
+                #    prtots[features.index(word)] += (1.0 - get_pagerank(pageranks, fname, reponame, len(repo_fnames)))
                 prtots[features.index(word)] += get_pagerank(pageranks, fname, reponame, len(repo_fnames))
         numtoks += len(words)
-    if numtoks == 0: numtoks = 1
-    return [float(x) / numtoks + prtots[i] for i,x in enumerate(counts)]
+    return prtots
+    #if len(repo_fnames) <= 1:
+    #    denom = 1
+    #else:
+    #    denom = len(repo_fnames) - 1
+    #return [(1.0 / denom) * pr for pr in prtots]
+
+    #if numtoks == 0: numtoks = 1
+    #return [float(x) / numtoks + prtots[i] for i,x in enumerate(counts)]
 
 def construct_lab_to_num_map(labs):
     return dict([(lab, i) for i,lab in enumerate(labs)])
@@ -103,6 +115,10 @@ def get_repo_to_pageranks_map(pagerank_vec_dirname, pagerank_cor_dirname):
         try:
             pr_vec = [float(line.strip())
                       for line in open(os.path.join(pagerank_vec_dirname, vec_fname), 'r').readlines()]
+            # we are getting a few vectors of +/- Inf. as a hack, just ignore them:
+            if len(pr_vec) > 0 and (pr_vec[0] == float('Inf') or pr_vec[0] == float('-Inf')):
+                sys.stderr.write('Inf eigenvector found for %s. Ignoring.\n' % vec_fname)
+                continue
         except ValueError:
             sys.stderr.write('Nonreal (or otherwise malformed) eigenvector found for %s. Ignoring.\n' % vec_fname)
             continue
