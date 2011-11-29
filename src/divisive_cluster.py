@@ -20,13 +20,13 @@ def main(labels_fname, tok_corp_dirname):
     conds = calc_conditionals(tok_corp_dirname, corp_labs)
     clusts = get_init_clusters(conds)
     refine_clusts(clusts, priors, conds)
-    print_clusts(clusts)
+    print_clusts(clusts, sys.stdout)
 
-def print_clusts(clusts):
+def print_clusts(clusts, stream):
     for i,c in enumerate(clusts):
-        print '%d==================================' % i
+        stream.write('%d==================================\n' % i)
         for tok in c:
-            print tok
+            stream.write('%s\n' % tok)
 
 def refine_clusts(clusts, priors, conds):
     converged = False
@@ -36,7 +36,8 @@ def refine_clusts(clusts, priors, conds):
     while True:
         sys.stderr.write('iteration %d:\n\n' % i)
         i += 1
-        sys.stderr.write('%s\n' % str([len(c) for c in clusts]))
+        print_clusts(clusts, sys.stderr)
+        sys.stderr.write('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n')
 
         #these two lines calculate step 2 in fig 1 of dhillon et al:
         clust_priors = get_clust_priors(clusts, priors)
