@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 ''' Pass this
 - The base directory where the repos are to be found;
-- a bunch of filenames of files, one per repository. Each file
-must contain newline-delimited paths to all of the *.java files
-in the repository (these are paths to actualy *.java files, and
-not to tokenized files).
+- a bunch of gzipped filenames where each file contains the tokens
+for each .java file in a repo. The tokens should all be newline delimited
+and each "java" file should be separtated by a line of the form
+'=!=!= <path.java.tok> =!=!=' ).
 
 This script prints a bunch of adjacency matrices, one for each project,
 in the CWD. It also prints a file giving the mapping between indices in
