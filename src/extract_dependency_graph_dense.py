@@ -76,7 +76,7 @@ def get_classname_from_file(all_files):
     for cur_file in all_files:
         line = cur_file[0]
         assert line.startswith('=!=!=')
-        assert line.endswith('.java.tok =!=!=')
+        #assert line.endswith('.java.tok =!=!=')
         line = line[6:-15]
         classnames.append(os.path.basename(line))
         classnames_lower.append(os.path.basename(line).lower())
