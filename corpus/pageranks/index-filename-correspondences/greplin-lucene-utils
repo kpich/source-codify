@@ -1,0 +1,10 @@
+BooleanQueryBuilder	3
+AllMatchCollector	7
+ForwardingSearchable	10
+PhrasePrefixQuery	5
+MatchNoDocsQuery	4
+CountingCollector	9
+UnorderedCollector	11
+ForwardingIndexReader	0
+AnyMatchCollector	8
+package-info	12

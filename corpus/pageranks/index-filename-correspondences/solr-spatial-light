@@ -1,0 +1,8 @@
+BenchmarkRunner	0
+SpatialSearchTest	6
+EmbeddedSolrServerFactory	5
+SpatialQueryComponent	3
+Spatial	2
+SolrSpatialBenchmark	1
+package-info	4
+TestHelper	7

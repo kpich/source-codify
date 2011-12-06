@@ -1,0 +1,17 @@
+MobilePhoneAdapter	6
+WebSMS	12
+Ads	1
+Preferences11Activity	8
+HeaderPreferenceFragment	4
+PreferencesAppearanceActivity	10
+PreferencesActivity	9
+package-info	17
+PreferencesBehaviorActivity	11
+WebSMSReceiver	14
+HelpActivity	5
+ConnectorSMS	15
+WebSMSApp	13
+DefaultSMSLengthCalculator	3
+AboutActivity	0
+CaptchaActivity	2
+MyTimePickerDialog	7

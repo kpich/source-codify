@@ -1,0 +1,11 @@
+MavenColorizerInterceptor	3
+MavenAlwaysOfflineInterceptor	0
+MavenYamlPomInterceptor	6
+Color	2
+TestVT100Writer	5
+App	7
+TestMavenAlwaysOfflineInterceptor	1
+VT100Writer	4
+MavenInterceptor	10
+EnvMavenInterceptor	9
+Dispatcher	8

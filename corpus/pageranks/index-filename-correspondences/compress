@@ -1,0 +1,16 @@
+TestLZFInputStream	11
+LZFInputStream	6
+TestFileStreams	13
+LZFChunk	3
+TestLZFOutputStream	12
+LZFEncoder	5
+LZFFileInputStream	8
+ChunkEncoder	1
+LZFOutputStream	7
+TestLZFDecoder	10
+LZFDecoder	4
+TestLZF	15
+ManualPerfComparison	14
+LZFFileOutputStream	9
+BufferRecycler	0
+LZF	2

@@ -1,0 +1,16 @@
+ConsumerRepository	2
+DoNothingBatchHandler	9
+EvilEqualsBatchHandler	10
+ConsumerGroup	0
+StubExceptionHandler	13
+StubExecutor	14
+DisruptorWizardTest	6
+BatchHandlerStub	7
+ExceptionHandlerSetting	4
+DelayedBatchHandler	8
+ExceptionThrowingBatchHandler	11
+StubEntry	12
+ConsumerRepositoryTest	5
+ConsumerInfo	1
+DisruptorWizard	3
+StubProducer	15

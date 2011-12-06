@@ -1,0 +1,17 @@
+MailTask	5
+Register	9
+AdminController	0
+PersistentUser	12
+DuplicateUserException	7
+LoginController	2
+ErrorController	1
+PersistentTokenRepositoryImpl	17
+RegisterController	3
+UserPassAuthFilterBeanPostProcessor	19
+EnhancedUser	15
+MailService	21
+UserAccount	13
+PersistentLogin	11
+UserDetailsServiceImpl	18
+package-info	22
+EnhancedUserDetailsService	16

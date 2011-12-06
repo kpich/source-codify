@@ -1,0 +1,12 @@
+Decompiler	8
+JarClassLoader	2
+Parser	9
+ScriptOrFnScope	6
+Bootstrap	0
+JavaScriptCompressor	3
+JavaScriptToken	5
+Token	10
+TokenStream	11
+CssCompressor	1
+JavaScriptIdentifier	4
+YUICompressor	7

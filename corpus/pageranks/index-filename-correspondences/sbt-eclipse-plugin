@@ -1,0 +1,16 @@
+HideLibManagedAction	13
+UnmanagedLibsConfigurer	10
+AbstractConfigurer	5
+SourceFoldersConfigurer	9
+DefaultOutputPathConfigurer	8
+ClasspathContainerConfigurer	6
+SbtImportWizardPage	15
+JarInformation	1
+ClasspathRemoverConfigurer	7
+SbtClasspathContainer	2
+SbtClasspathContainerPage	4
+ConfigureSourceFoldersAction	12
+AbstractProjectAction	11
+SbtImportWizard	14
+SbtClasspathContainerInitializer	3
+Constants	0

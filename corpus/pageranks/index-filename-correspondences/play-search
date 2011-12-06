@@ -1,0 +1,15 @@
+FileExtractor	8
+Search	5
+SearchPlugin	6
+Administration	0
+MimeGuesser	14
+SearchReindexJob	1
+ExtensionGuesser	13
+Field	2
+ConvertionUtils	7
+TextExtractor	12
+ManagedIndex	10
+Indexed	3
+Query	4
+Store	11
+FilesystemStore	9

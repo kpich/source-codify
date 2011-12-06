@@ -1,0 +1,16 @@
+Customer	7
+HibernateModule	1
+Product	15
+Office	9
+OrderDetail	11
+OrderDetailId	12
+Employee	8
+HibernateSerializers	3
+PaymentId	14
+BaseTest	5
+PersistentCollectionSerializer	4
+HibernateProxySerializer	2
+HibernateAnnotationIntrospector	0
+Payment	13
+Order	10
+HibernateTest	6

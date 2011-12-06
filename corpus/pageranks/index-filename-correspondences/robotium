@@ -1,0 +1,16 @@
+Searcher	9
+Presser	6
+Scroller	8
+Solo	12
+Waiter	15
+MatchCounter	5
+ViewFetcher	14
+TextEnterer	13
+Clicker	3
+Asserter	1
+Checker	2
+DialogUtils	4
+Sleeper	11
+Setter	10
+RobotiumUtils	7
+ActivityUtils	0

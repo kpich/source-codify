@@ -1,0 +1,17 @@
+NamespaceDiscovery	12
+ClojureRunTestMojo	8
+ClojureCompilerMojo	2
+ClojureAutodocMojo	1
+ClojureRunTestWithJUnitMojo	9
+NamespaceInFile	13
+ClojureReplMojoTest	15
+NamespaceDiscoveryTest	16
+ClojureRunMojo	7
+ClojureNailgunMojo	5
+ExecutionMode	11
+TestClojureCompilerMojo	14
+ClojureSwankMojo	10
+ClojureGenDocMojo	3
+ClojureReplMojo	6
+ClojureMarginaliaMojo	4
+AbstractClojureCompilerMojo	0

@@ -1,0 +1,4 @@
+AppService	0
+OnBootReceiver	2
+WakefulIntentService	3
+OnAlarmReceiver	1

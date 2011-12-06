@@ -1,0 +1,6 @@
+MysqlReplicationIO	2
+TableMap	3
+Parser	4
+MysqlReplicationConn	1
+LogEvent	0
+JBinlogTest	5
